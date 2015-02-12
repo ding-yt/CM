@@ -12,7 +12,6 @@
 std::map<std::string, double> ParFile::get_parameters (std::string filename)
 {
     std::string line;
-//    char * ptrFilename = filename;
     parameterFile.open(filename.c_str());
     if (parameterFile.is_open()) {
         while (std::getline(parameterFile, line)) {

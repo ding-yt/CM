@@ -17,7 +17,6 @@ int main(int argc, const char * argv[])
     
     std::string setting_file, output;
     std::map<std::string, double> parameters;
-    ParFile p;
     int fail_count = 0;
     long random_seed;
     bool repeat_simulation = true;
@@ -25,6 +24,7 @@ int main(int argc, const char * argv[])
     map<double, vector<int>> migration_event;
     int migration_count = 0;
     int fileIndex = 0;
+    ParFile p;
     
     clock_t start_time = clock();
     
@@ -34,7 +34,6 @@ int main(int argc, const char * argv[])
                 setting_file = argv[i + 1];
             }else if (strcmp(argv[i], "-o") == 0){
                 output = argv[i+1];
-                //cout<<output<<"\n";
             }else if (strcmp(argv[i], "-s") == 0){
                 random_seed = std::atoi(argv[i+1]);
             }
@@ -47,8 +46,10 @@ int main(int argc, const char * argv[])
     
     parameters = p.get_parameters(setting_file);
     p.show();
+    
     GenealogyNode::set_allCellType(parameters);
     GenealogyNode::show_allCellType();
+    GenealogyNode::set_counter(0);
     
     double time_max = parameters["time_max"];
     int xStep = parameters["xStep"];
@@ -62,7 +63,7 @@ int main(int argc, const char * argv[])
     pointMutation.push_back(parameters["type_2_point_mutation_rate"]);
     pointMutation.push_back(parameters["type_3_point_mutation_rate"]);
     
-    GenealogyNode::set_counter(0);
+    
     Lattices space(xStep,yStep);
     space.setRandomSeed(random_seed);
     space.getBase("/Users/dyt/Dropbox/cancerEvolution/script/CM/testBase.txt");

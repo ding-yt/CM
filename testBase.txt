@@ -1,0 +1,9 @@
+sample at time 3.19635e+06
+type_0_count	4284
+type_1_count	5716
+type_2_count	0
+type_3_count	0
+sample1
+6294579	1	6294464	1	6290274	1	6287850	1	6282010	1	
+sample2
+144	1 27777	1	37777	1	3397687	1

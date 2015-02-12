@@ -1,0 +1,34 @@
+dimension = 2
+time_max = 50000000000
+cell_types = 4
+type_1_initial_number = 1
+sample_size = 50
+sample_time_interval = 50000000000
+
+#For 2D PDE model
+xStep = 200
+yStep = 200
+#cell type parameters:
+type_0_proliferation = 0.668545516654073;
+type_0_mutation_rate = 0;
+type_0_migration_rate = 0;
+type_0_death_rate = 0;
+type_0_fitness = 1 ;
+
+type_1_proliferation = 0.548246987241631;
+type_1_mutation_rate = 0.0773934667526434;
+type_1_migration_rate = 0.003;
+type_1_death_rate = 0;
+type_1_fitness = 2.73501368831688 ;
+
+type_2_proliferation = 0.54782807507242;
+type_2_mutation_rate = 0.0579533905617427;
+type_2_migration_rate = 0.003;
+type_2_death_rate = 0;
+type_2_fitness = 1.53840575026503 ;
+
+type_1_proliferation = 0.58819999548917;
+type_1_mutation_rate = 0;
+type_1_migration_rate = 0.003;
+type_1_death_rate = 0;
+type_1_fitness = 1.57422463007582 ;
